@@ -76,7 +76,6 @@ module MEMORY(WE, DataToWrite, RegSel, ReadData);
   output  [7:0] ReadData;
   reg [7:0] ReadData;
   reg [7:0] Mem [0:15];
-  integer i;
   always  @ (WE or DataToWrite or RegSel) begin
     case(RegSel)
       16'h8000: begin
